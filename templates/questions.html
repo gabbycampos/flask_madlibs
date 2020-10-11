@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/app.css">
+  <title>Flask Madlibs</title>
+</head>
+
+<body>
+  <div id="home">
+      <h1>Madlibs</h1>
+      <form action="/story">
+        {% for prompt in prompts %}
+        <p>{{ prompt }}:
+          <input name="{{ prompt }}">
+        </p>
+        {% endfor %}
+        <button>Submit</button>
+      </form>
+  </div>
+
+</body>
+
+</html>
